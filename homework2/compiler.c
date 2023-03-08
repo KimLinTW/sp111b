@@ -104,12 +104,12 @@ void DO_WHILE() {
   emit("goto L%d\n", whileBegin);
   emit("(L%d)\n", whileBegin);
  
-
   skip("while");
   skip("(");
   int e = E();
   emit("if not T%d goto L%d\n", e, whileEnd);
   skip(")");
+  skip(";");
 }
 
 // STMT = WHILE | BLOCK | ASSIGN
