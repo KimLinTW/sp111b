@@ -99,11 +99,11 @@ void DO_WHILE() {
   int whileEnd = nextLabel();
 
   skip("do");
-  skip("{");
+ 
   STMT();
   emit("goto L%d\n", whileBegin);
   emit("(L%d)\n", whileBegin);
-  skip("}");
+ 
 
   skip("while");
   skip("(");
