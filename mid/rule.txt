@@ -1,0 +1,5 @@
+123
+sudo iptables -A INPUT -m mac --mac-source 74:4c:a1:60:7b:03 -j DROP
+sudo iptables -t filter -A INPUT -j DROP -s 192.168.0.119
+sudo iptables -A INPUT -m mac --mac-source 28:c6:3f:e2:f6:94 -j DROP
+sudo iptables -t filter -A INPUT -j DROP -s 192.168.0.127
